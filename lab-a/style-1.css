@@ -1,3 +1,62 @@
-body {
-  background-color: #dfecff;
+/* Styl 1 retro */
+body{
+  font-family: "Courier New", monospace;
+  background: linear-gradient(180deg,#2b2b2b,#111);
+  color:#f4f4f4;
+  margin:0;
+}
+header{
+  background:#000;
+  padding:20px;
+  text-align:center;
+  border-bottom:4px solid #00ffcc;
+}
+nav ul{
+  list-style:none;
+  padding:0;
+}
+nav li{
+  display:inline-block;
+  margin:0 15px;
+}
+nav a{
+  color:#00ffcc;
+  text-decoration:none;
+}
+main{
+  max-width:960px;
+  margin:auto;
+  padding:20px;
+}
+section{
+  background:#1b1b1b;
+  border:3px solid #444;
+  padding:20px;
+  margin-bottom:30px;
+  box-shadow:0 0 10px #000;
+}
+h1{
+  color:#00ffcc;
+}
+h2{
+  color:#ffcc00;
+}
+h3{
+  color:#ff6699;
+}
+footer{
+  text-align:center;
+  padding:15px;
+  background:#000;
+  border-top:4px solid #00ffcc;
+}
+/*responsive*/
+@media (max-width:600px){
+  nav li{
+    display:block;
+    margin:10px 0;
+  }
+  main{
+    padding:10px;
+  }
 }
