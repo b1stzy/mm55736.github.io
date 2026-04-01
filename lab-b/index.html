@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Melnyk Mykhailo (55736) - PTW LAB B</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <main class="todo-app">
+        <h1>Lista zadań – PTW LAB B</h1>
+
+        <!-- Wyszukiwarka -->
+        <section class="todo-search">
+            <label for="search">Wyszukaj zadanie:</label>
+            <input type="text" id="search" placeholder="Wpisz frazę...">
+        </section>
+
+        <!-- Lista zadań -->
+        <section class="todo-list-section">
+            <h2>Twoje zadania</h2>
+            <ul id="todo-list">
+                <!-- Przykładowe pozycje „na sztywno” -->
+                <li class="todo-item">
+                    <span class="todo-text">Zadanie 1</span>
+                    <button class="todo-delete">Usuń</button>
+                </li>
+                <li class="todo-item">
+                    <span class="todo-text">Zadanie 2</span>
+                    <button class="todo-delete">Usuń</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Dodawanie nowego zadania -->
+        <section class="todo-add">
+            <h2>Dodaj nowe zadanie</h2>
+            <form id="add-form">
+                <label for="new-task">Treść zadania:</label>
+                <input type="text" id="new-task" placeholder="Co masz do zrobienia?">
+
+                <label for="new-deadline">Termin (opcjonalnie):</label>
+                <input type="date" id="new-deadline">
+
+                <button type="submit">Dodaj zadanie</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
