@@ -1,0 +1,53 @@
+/* Фон */
+body {
+  background: linear-gradient(135deg, #1a1f3c, #4b2a7f);
+  color: #e6e6ff;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 40px;
+}
+
+/* Заголовок */
+h1 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+/* РОЗТЯГНУТІ БЛОКИ */
+.box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 35px;
+  border-radius: 14px;
+  width: 85%;              /* ← РОЗТЯГНУВ */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  margin-bottom: 50px;
+}
+
+/* ДІАГОНАЛЬ */
+.box:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.box:nth-of-type(2) {
+  margin-left: 120px;      /* ← Зсув більше */
+}
+
+.box:nth-of-type(3) {
+  margin-left: 240px;      /* ← Ще більше */
+}
+
+/* Кнопки стилів — залишив звичайні */
+#style-switcher {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 9999;
+}
+button:hover {
+  background: #6fa2ff;
+}
