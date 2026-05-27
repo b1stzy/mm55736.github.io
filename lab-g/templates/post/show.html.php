@@ -1,21 +1,17 @@
 <?php
+$title = 'Post Details';
 
-/** @var \App\Model\Post $post */
-/** @var \App\Service\Router $router */
+ob_start();
+?>
+    <h1><?= htmlspecialchars($post->getSubject()) ?></h1>
 
-$title = "{$post->getSubject()} ({$post->getId()})";
-$bodyClass = 'show';
-
-ob_start(); ?>
-    <h1><?= $post->getSubject() ?></h1>
-    <article>
-        <?= $post->getContent();?>
-    </article>
+    <p><?= nl2br(htmlspecialchars($post->getBody())) ?></p>
 
     <ul class="action-list">
-        <li> <a href="<?= $router->generatePath('post-index') ?>">Back to list</a></li>
-        <li><a href="<?= $router->generatePath('post-edit', ['id'=> $post->getId()]) ?>">Edit</a></li>
+        <li><a href="<?= $router->generatePath('post-edit', ['id' => $post->getId()]) ?>">Edit</a></li>
+        <li><a href="<?= $router->generatePath('post-index') ?>">Back</a></li>
     </ul>
-<?php $main = ob_get_clean();
 
-include __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'base.html.php';
+<?php
+$page = ob_get_clean();
+require __DIR__ . '/../base.html.php';

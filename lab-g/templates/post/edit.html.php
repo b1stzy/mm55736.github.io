@@ -1,31 +1,16 @@
 <?php
+$title = 'Edit Post';
 
-/** @var \App\Model\Post $post */
-/** @var \App\Service\Router $router */
+ob_start();
+?>
+    <h1>Edit Post</h1>
 
-$title = "Edit Post {$post->getSubject()} ({$post->getId()})";
-$bodyClass = "edit";
-
-ob_start(); ?>
-    <h1><?= $title ?></h1>
-    <form action="<?= $router->generatePath('post-edit') ?>" method="post" class="edit-form">
-        <?php require __DIR__ . DIRECTORY_SEPARATOR . '_form.html.php'; ?>
-        <input type="hidden" name="action" value="post-edit">
-        <input type="hidden" name="id" value="<?= $post->getId() ?>">
+    <form method="post">
+        <?php require __DIR__ . '/_form.html.php'; ?>
     </form>
 
-    <ul class="action-list">
-        <li>
-            <a href="<?= $router->generatePath('post-index') ?>">Back to list</a></li>
-        <li>
-            <form action="<?= $router->generatePath('post-delete') ?>" method="post">
-                <input type="submit" value="Delete" onclick="return confirm('Are you sure?')">
-                <input type="hidden" name="action" value="post-delete">
-                <input type="hidden" name="id" value="<?= $post->getId() ?>">
-            </form>
-        </li>
-    </ul>
+    <a href="<?= $router->generatePath('post-show', ['id' => $post->getId()]) ?>">Back</a>
 
-<?php $main = ob_get_clean();
-
-include __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'base.html.php';
+<?php
+$page = ob_get_clean();
+require __DIR__ . '/../base.html.php';

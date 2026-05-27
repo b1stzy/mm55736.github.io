@@ -1,0 +1,6 @@
+CREATE TABLE car (
+                     id INTEGER PRIMARY KEY AUTOINCREMENT,
+                     brand TEXT NOT NULL,
+                     model TEXT NOT NULL,
+                     year INTEGER NOT NULL
+);
