@@ -1,0 +1,16 @@
+<h1>Edit: <%= car.brand %> <%= car.model %></h1>
+
+<form action="/car/edit/<%= car.id %>" method="POST">
+  <label>Brand:</label>
+  <input type="text" name="brand" value="<%= car.brand %>" required />
+
+  <label>Model:</label>
+  <input type="text" name="model" value="<%= car.model %>" required />
+
+  <label>Year:</label>
+  <input type="number" name="year" value="<%= car.year %>" required />
+
+  <button type="submit">Submit</button>
+</form>
+
+<a href="/car">Back to list</a>
